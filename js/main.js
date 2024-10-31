@@ -60,10 +60,6 @@ d3.json("data/data.json").then(data => {
         .style("pointer-events", "none")
         .style("opacity", 0);
 
-    // Add titles to nodes (optional, backup for tooltips)
-    node.append("title")
-        .text(d => d.id);
-
     // Update positions on each simulation tick
     simulation.on("tick", () => {
         link
