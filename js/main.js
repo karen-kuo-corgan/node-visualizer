@@ -39,7 +39,7 @@ d3.json("data/data.json").then(data => {
         .selectAll("circle")
         .data(data.nodes)
         .enter().append("circle")
-        .attr("r", 5)
+        .attr("r", 15)
         .attr("fill", d => color(d.group))
         .call(d3.drag()
             .on("start", dragstarted)
