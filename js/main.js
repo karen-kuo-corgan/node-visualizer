@@ -54,11 +54,12 @@ d3.json("data/data.json").then(data => {
         .selectAll("text")
         .data(data.nodes)
         .enter().append("text")
-        .attr("x", d => d.x + 10)
+        .attr("x", d => d.x)
         .attr("y", d => d.y - 20)
         .attr("class", "node-label")
-        .style("fill", "#fff")
+        .style("fill", "#000") // Change text color to black
         .style("font-size", "12px")
+        .style("text-anchor", "middle") // Center the text horizontally
         .text(d => d.id);
 
     // Tooltip for displaying node IDs
@@ -86,7 +87,7 @@ d3.json("data/data.json").then(data => {
             .attr("cy", d => d.y);
 
         labels
-            .attr("x", d => d.x + 10)
+            .attr("x", d => d.x)
             .attr("y", d => d.y - 20);
     });
 
