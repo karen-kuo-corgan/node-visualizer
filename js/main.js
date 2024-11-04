@@ -62,7 +62,7 @@ d3.json("data/data.json").then(data => {
         .data(data.nodes)
         .enter().append("text")
         .attr("x", d => d.x)
-        .attr("y", d => d.y - 20)
+        .attr("y", d => d.y)
         .attr("class", "node-label")
         .style("fill", "#000") // Change text color to black
         .style("font-size", "12px")
@@ -95,7 +95,7 @@ d3.json("data/data.json").then(data => {
 
         labels
             .attr("x", d => d.x)
-            .attr("y", d => d.y - 20);
+            .attr("y", d => d.y);
     });
 
     // Drag functions
