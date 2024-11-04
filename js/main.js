@@ -48,6 +48,19 @@ d3.json("data/data.json").then(data => {
         .on("mouseover", handleMouseOver)
         .on("mouseout", handleMouseOut);
 
+    // Append static text labels to each node
+    const labels = g.append("g")
+        .attr("class", "labels")
+        .selectAll("text")
+        .data(data.nodes)
+        .enter().append("text")
+        .attr("x", d => d.x + 10)
+        .attr("y", d => d.y - 20)
+        .attr("class", "node-label")
+        .style("fill", "#fff")
+        .style("font-size", "12px")
+        .text(d => d.id);
+
     // Tooltip for displaying node IDs
     const tooltip = d3.select("#graph")
         .append("div")
@@ -71,6 +84,10 @@ d3.json("data/data.json").then(data => {
         node
             .attr("cx", d => d.x)
             .attr("cy", d => d.y);
+
+        labels
+            .attr("x", d => d.x + 10)
+            .attr("y", d => d.y - 20);
     });
 
     // Drag functions
