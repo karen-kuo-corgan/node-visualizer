@@ -17,6 +17,13 @@ d3.json("data/data.json").then(data => {
 
     const g = svg.append("g");
 
+    // Calculate the degree of each node
+    const nodeDegree = {};
+    data.links.forEach(link => {
+        nodeDegree[link.source] = (nodeDegree[link.source] || 0) + 1;
+        nodeDegree[link.target] = (nodeDegree[link.target] || 0) + 1;
+    });
+
     // Initialize force simulation
     const simulation = d3.forceSimulation(data.nodes)
         .force("link", d3.forceLink(data.links).id(d => d.id).distance(100))
@@ -39,7 +46,7 @@ d3.json("data/data.json").then(data => {
         .selectAll("circle")
         .data(data.nodes)
         .enter().append("circle")
-        .attr("r", 15)
+        .attr("r", d => 5 + (nodeDegree[d.id] || 0) * 2) // Dynamic radius based on node degree
         .attr("fill", d => color(d.group))
         .call(d3.drag()
             .on("start", dragstarted)
