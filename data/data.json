@@ -851,6 +851,11 @@
       "value": 2
     },
     {
+      "source": "Glazing",
+      "target": "Jondrette",
+      "value": 2
+    },
+    {
       "source": "Mme.Burgon",
       "target": "Jondrette",
       "value": 1
