@@ -19,7 +19,8 @@
     {"id": "Fan Runtimes", "group": 3},
     {"id": "Energy Use", "group": 3},
     {"id": "Carbon Emissions", "group": 3},
-    {"id": "Wall Systems", "group": 1}
+    {"id": "Wall Systems", "group": 1},
+    {"id": "Thermal Comfort", "group": 3}
   ],
   "links": [
     {"source": "Glazing", "target": "Wall Systems", "value": 1},
