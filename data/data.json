@@ -53,10 +53,10 @@
     {"source": "Plant Runtimes", "target": "Energy Use", "value": 1},
     {"source": "Fan Runtimes", "target": "Energy Use", "value": 1},
     {"source": "Energy Use", "target": "Carbon Emissions", "value": 1},
-    {"source": "Views", "target": "Glare", "value": 1},
+    {"source": "Views", "target": "Glare", "value": 0},
     {"source": "Views", "target": "Daylight", "value": 0},
     {"source": "Daylight", "target": "Glare", "value": 1},
-    {"source": "Daylight", "target": "Climate", "value": 1},
-    {"source": "Climate", "target": "Glare", "value": 1}
+    {"source": "Daylight", "target": "Climate", "value": 0},
+    {"source": "Climate", "target": "Glare", "value": 0}
   ]
 }
