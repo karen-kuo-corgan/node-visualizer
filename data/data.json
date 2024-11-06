@@ -41,7 +41,7 @@
     {"source": "Thermal Comfort", "target": "Cooling Loads", "value": 1},
     {"source": "Thermal Comfort", "target": "Heating Loads", "value": 1},
     {"source": "Thermal Comfort", "target": "Climate", "value": 1},
-    {"source": "Aesthetics", "target": "Chase Requirements", "value": 1},
+    {"source": "Aesthetics", "target": "Chase Requirements", "value": 0},
     {"source": "Chase Requirements", "target": "Duct Sizes", "value": 1},
     {"source": "Duct Sizes", "target": "HVAC Air Volume", "value": 1},
     {"source": "HVAC Air Volume", "target": "Heating Loads", "value": 1},
